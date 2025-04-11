@@ -1,0 +1,73 @@
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
+
+/* Full-width background image */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* Semi-transparent overlay for better readability */
+.overlay {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+/* Title Styling */
+.home-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 30px; /* Push text slightly down */
+}
+
+/* Changing Text Effect */
+.changing-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffcc00;
+  margin-top: 10px;
+  animation: fadeEffect 3s infinite ease-in-out;
+}
+
+/* Keyframe animation for smooth text transitions */
+@keyframes fadeEffect {
+  0% { opacity: 0; transform: translateY(10px); }
+  50% { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Button Styling */
+.home-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px; /* Add space below text */
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}

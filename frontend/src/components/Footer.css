@@ -1,0 +1,184 @@
+/* General Footer Styles */
+.footer {
+  background-color: #292c31;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Footer Container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Footer Title */
+.footer-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer-container h2 span {
+  color: #007bff;
+}
+
+/* 🔹 Contact Section */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-item h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.contact-item p a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-item p a:hover {
+  color: #007bff;
+}
+
+/* 🔹 Subscription Section */
+.subscribe-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subscribe-section input {
+  padding: 10px;
+  border: none;
+  width: 250px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.subscribe-section button {
+  padding: 10px 20px;
+  background: #007bff;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.subscribe-section button:hover {
+  background: #0056b3;
+}
+
+/* 🔹 Social Media Icons */
+.social-icons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+/* 🔹 Footer Logo */
+.footer-logo img {
+  height: 60px;
+  margin: 20px 0;
+  max-width: 100%;
+}
+
+/* 🔹 Copyright Section */
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.copyright .brand {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.copyright .author {
+  color: #007bff;
+}
+
+/* 🔹 WhatsApp Icon */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: limegreen;
+  color: white;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .subscribe-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribe-section input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .whatsapp-icon {
+    bottom: 15px;
+    right: 15px;
+    font-size: 24px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container h2 {
+    font-size: 20px;
+  }
+
+  .contact-item h3 {
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+}
