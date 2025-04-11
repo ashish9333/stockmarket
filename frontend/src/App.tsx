@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
-import News from "./components/News";
 import Demat from "./components/Demat";
 import Course from "./components/Course";
 
@@ -15,7 +14,6 @@ const App: React.FC = () => {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/news" element={<News />} />
             <Route path="/demat" element={<Demat />} />
             <Route path="/course" element={<Course />} />
           </Routes>
