@@ -11,7 +11,7 @@ const Demat: React.FC = () => {
           <h2>Dhan Account</h2>
           <p>Experience lightning-fast trading with Dhan. Zero brokerage on equity delivery.</p>
           <a
-            href="https://dhan.co"
+            href="https://join.dhan.co/?invite=AEQAF94174"
             target="_blank"
             rel="noopener noreferrer"
             className="broker-button"
@@ -24,7 +24,7 @@ const Demat: React.FC = () => {
           <h2>Kotak Neo Account</h2>
           <p>Trade with confidence using Kotak Neo. Flat brokerage and powerful tools.</p>
           <a
-            href="https://neo.kotaksecurities.com"
+            href="https://kotaksecurities.ref-r.com/c/i/32531/86664963"
             target="_blank"
             rel="noopener noreferrer"
             className="broker-button"
