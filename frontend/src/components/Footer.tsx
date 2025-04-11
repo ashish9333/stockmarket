@@ -50,7 +50,14 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="whatsapp-icon">
+        <a
+          href="https://wa.me/919333511512"  // replace with your WhatsApp number
+          className="whatsapp-icon"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaWhatsapp />
+        </a>
         </div>
       </div>
     </footer>
