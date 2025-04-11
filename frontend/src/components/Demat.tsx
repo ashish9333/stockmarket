@@ -1,5 +1,7 @@
 import React from "react";
 import "./Demat.css";
+import dhanLogo from "../assets/dhan.png";
+import kotakLogo from "../assets/kotak.png";
 
 const Demat: React.FC = () => {
   return (
@@ -8,8 +10,10 @@ const Demat: React.FC = () => {
 
       <div className="broker-section">
         <div className="broker-card dhan">
-          <h2>Dhan Account</h2>
-          <p>Experience lightning-fast trading with Dhan. Zero brokerage on equity delivery.</p>
+          <img src={dhanLogo} alt="Dhan Logo" className="broker-logo" />
+          <p>
+            Experience lightning-fast trading with Dhan. Zero brokerage on equity delivery.
+          </p>
           <a
             href="https://join.dhan.co/?invite=AEQAF94174"
             target="_blank"
@@ -21,8 +25,10 @@ const Demat: React.FC = () => {
         </div>
 
         <div className="broker-card kotak">
-          <h2>Kotak Neo Account</h2>
-          <p>Trade with confidence using Kotak Neo. Flat brokerage and powerful tools.</p>
+          <img src={kotakLogo} alt="Kotak Neo Logo" className="broker-logo" />
+          <p>
+            Trade with confidence using Kotak Neo. Flat brokerage and powerful tools.
+          </p>
           <a
             href="https://kotaksecurities.ref-r.com/c/i/32531/86664963"
             target="_blank"
