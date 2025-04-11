@@ -33,7 +33,10 @@ const Home: React.FC = () => {
       <div className="overlay">
         <h1 className="home-title">Turn Your Trading Passion into Profit – Join Our Course!</h1>
         <p className="changing-text">{words[index]}</p>
-        <button className="home-button">Get Started</button>
+        <a href="https://forms.gle/ctbugW6tzm8zCD66A" target="_blank" rel="noopener noreferrer">
+          <button className="home-button">Get Started</button>
+        </a>
+
       </div>
     </div>
   );
