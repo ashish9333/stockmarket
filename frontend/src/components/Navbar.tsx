@@ -21,10 +21,10 @@ const Navbar: React.FC = () => {
     <>
       <nav className="navbar">
         <div className="container">
-          <div className="logo-container">
-            <img src={logo} alt="Logo" className="logo-image" />
-            <h1 className="logo-text">The Stock Trader</h1>
-          </div>
+        <Link to="/" className="logo-container" onClick={closeMenu}>
+          <img src={logo} alt="Logo" className="logo-image" />
+          <h1 className="logo-text">The Stock Trader</h1>
+        </Link>
 
           {/* Hamburger Menu Button */}
           <button className="menu-button" onClick={toggleMenu} aria-label="Toggle Menu">
