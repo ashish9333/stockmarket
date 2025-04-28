@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
           <a href="https://www.youtube.com/@ashishkumarsingh9333" target="_blank" rel="noopener noreferrer">
             <FaYoutube />
           </a>
-          <a href="https://www.instagram.com/ashish.kr.singh_/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/the.stock.trader_/" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
         </div>

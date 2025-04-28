@@ -1,25 +1,30 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // <-- Import useNavigate
 import "./Home.css";
 
 const Home: React.FC = () => {
   const words = [
-    // "Master the Markets, Maximize Your Profits!",
     "Learn Support and Resistance Strategies",
     "Explore Candlesticks for Better Trading",
     "Understand Price Action Trading",
     "Master Candlestick Patterns",
-    
   ];
 
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate(); // <-- Setup navigate hook
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 3000); // Change every 3 seconds
+    }, 3000);
 
     return () => clearTimeout(timeout);
-  }, [index]); // Only re-run when index changes
+  }, [index]);
+
+  // Handle button click
+  const handleGetStarted = () => {
+    navigate("/course"); // <-- Redirect to Course page
+  };
 
   return (
     <div className="home-container">
@@ -33,10 +38,11 @@ const Home: React.FC = () => {
       <div className="overlay">
         <h1 className="home-title">Turn Your Trading Passion into Profit – Join Our Course!</h1>
         <p className="changing-text">{words[index]}</p>
-        <a href="https://forms.gle/ctbugW6tzm8zCD66A" target="_blank" rel="noopener noreferrer">
-          <button className="home-button">Get Started</button>
-        </a>
 
+        {/* Updated Button */}
+        <button className="home-button" onClick={handleGetStarted}>
+          Get Started
+        </button>
       </div>
     </div>
   );
