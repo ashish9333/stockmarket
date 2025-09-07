@@ -1,7 +1,7 @@
 /* Course Page */
 .course-container {
-  padding: 80px 20px;
-  background-color: #f9f9f9;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #f9f9f9, #eef3f9);
   min-height: 100vh;
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -9,23 +9,24 @@
 
 .course-title {
   font-size: 2.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   color: #292c31;
   font-weight: bold;
 }
 
+/* Course Card */
 .course-card {
   background-color: white;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   transition: transform 0.3s ease-in-out;
 }
 
 .course-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
 }
 
 .course-image {
@@ -47,14 +48,14 @@
 .course-features {
   list-style: none;
   padding: 0;
-  margin: 0 0 30px 0;
+  margin: 0 0 25px 0;
   text-align: left;
 }
 
 .course-features li {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #333;
-  margin: 12px 0;
+  margin: 10px 0;
   display: flex;
   align-items: center;
   animation: fadeIn 0.8s ease;
@@ -63,7 +64,7 @@
 /* Enroll Button */
 .enroll-button {
   display: inline-block;
-  background-color: #007bff;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
   color: white;
   padding: 12px 28px;
   border-radius: 30px;
@@ -75,8 +76,81 @@
 }
 
 .enroll-button:hover {
-  background-color: #0056b3;
   transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.5);
+}
+
+/* Why Choose Us Accordion */
+.why-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 800px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.why-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-align: center;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fdfdfd;
+  transition: all 0.3s ease;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 14px 18px;
+  background: #f9f9f9;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: #eef6ff;
+}
+
+.accordion-icon {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.accordion-content {
+  padding: 14px 18px;
+  background: white;
+  color: #555;
+  font-size: 0.95rem;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
@@ -86,7 +160,7 @@
   }
 
   .course-card {
-    margin: 0 15px;
+    margin: 0 15px 25px 15px;
   }
 
   .course-image {
@@ -102,7 +176,16 @@
   }
 
   .enroll-button {
-    padding: 10px 24px;
+    padding: 10px 22px;
     font-size: 1rem;
+  }
+
+  .why-card {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .why-title {
+    font-size: 1.5rem;
   }
 }
