@@ -28,10 +28,10 @@ const Footer: React.FC = () => {
             <a href="mailto:ashishk.9333@gmail.com">ashishk.9333@gmail.com</a>
           </p>
           <div className="social">
-            <a href="https://youtube.com/@yourchannel" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <a href="https://youtube.com/@thestocktrader9333" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
               <FaYoutube />
             </a>
-            <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://instagram.com/the.stock.trader_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram />
             </a>
             <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">

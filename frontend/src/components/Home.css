@@ -19,7 +19,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,14 +39,20 @@
 .home-title {
   font-size: 3rem;
   margin-bottom: 20px;
+  line-height: 1.2;
 }
 
+/* Gradient Text (fixed for cross-browser) */
 .gradient-text {
   background: linear-gradient(90deg, #00c6ff, #0072ff);
-  -webkit-background-clip: text;
+  background-clip: text;            /* ✅ Standard property */
+  -webkit-background-clip: text;    /* ✅ Safari/Chrome */
+  -moz-background-clip: text;       /* ✅ Firefox (legacy) */
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
+/* Rotating Text */
 .changing-text {
   font-size: 1.4rem;
   margin-bottom: 30px;
@@ -59,13 +65,14 @@
   display: flex;
   gap: 15px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .home-button {
   padding: 12px 24px;
   font-size: 1rem;
   border-radius: 8px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
@@ -74,10 +81,12 @@
 .home-button.primary {
   background: #007bff;
   color: white;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
-
 .home-button.primary:hover {
   background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
 }
 
 .home-button.secondary {
@@ -85,10 +94,10 @@
   border: 2px solid #007bff;
   color: #007bff;
 }
-
 .home-button.secondary:hover {
   background: #007bff;
   color: white;
+  transform: translateY(-2px);
 }
 
 /* Why Choose Us Section */
@@ -113,15 +122,15 @@
 
 .feature-card {
   background: white;
-  padding: 20px;
+  padding: 24px;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   width: 280px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .feature-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
 .feature-card h3 {
@@ -159,5 +168,10 @@
   .features-grid {
     flex-direction: column;
     align-items: center;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
   }
 }
