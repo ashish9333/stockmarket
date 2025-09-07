@@ -1,47 +1,72 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../assets/logo.png"; // Adjust path as needed
-import { FiMenu, FiX } from "react-icons/fi"; // Import menu icons
+import { FiMenu, FiX } from "react-icons/fi";
+import logo from "../assets/logo.png";
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
 
-  // Toggle menu
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  // Close menu when clicking on overlay
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  const toggle = () => setOpen((p) => !p);
+  const close = () => setOpen(false);
 
   return (
     <>
       <nav className="navbar">
-        <div className="container">
-        <Link to="/" className="logo-container" onClick={closeMenu}>
-          <img src={logo} alt="Logo" className="logo-image" />
-          <h1 className="logo-text">The Stock Trader</h1>
-        </Link>
+        <div className="nav-inner">
+          <Link to="/" className="brand" onClick={close} aria-label="Go Home">
+            <img src={logo} alt="The Stock Trader logo" className="brand-logo" />
+            <span className="brand-text">The Stock Trader</span>
+          </Link>
 
-          {/* Hamburger Menu Button */}
-          <button className="menu-button" onClick={toggleMenu} aria-label="Toggle Menu">
-            {isOpen ? <FiX /> : <FiMenu />}
+          <button className="hamburger" onClick={toggle} aria-label="Toggle menu">
+            {open ? <FiX /> : <FiMenu />}
           </button>
 
-          {/* Navigation Links */}
-          <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-            <li><Link to="/" className="nav-link" onClick={closeMenu}>Home</Link></li>
-            <li><Link to="/demat" className="nav-link" onClick={closeMenu}>Account</Link></li>
-            <li><Link to="/course" className="nav-link" onClick={closeMenu}>Courses</Link></li>
+          <ul className={`nav-links ${open ? "open" : ""}`}>
+            <li>
+              <Link
+                to="/"
+                className={`nav-link ${pathname === "/" ? "active" : ""}`}
+                onClick={close}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/course"
+                className={`nav-link ${pathname.startsWith("/course") ? "active" : ""}`}
+                onClick={close}
+              >
+                Course
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/demat"
+                className={`nav-link ${pathname.startsWith("/demat") ? "active" : ""}`}
+                onClick={close}
+              >
+                Open Account
+              </Link>
+            </li>
+            {/* <li>
+              <Link
+                to="/news"
+                className={`nav-link ${pathname.startsWith("/news") ? "active" : ""}`}
+                onClick={close}
+              >
+                Business News
+              </Link>
+            </li> */}
           </ul>
         </div>
       </nav>
 
-      {/* Overlay Effect */}
-      {isOpen && <div className="overlay" onClick={closeMenu}></div>}
+      {/* Backdrop for mobile */}
+      {open && <div className="nav-backdrop" onClick={close} />}
     </>
   );
 };
