@@ -13,6 +13,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  animation: fadeVideo 1.5s ease-in forwards;
 }
 
 /* Overlay with gradient */
@@ -105,6 +107,8 @@
   background: #f9f9f9;
   padding: 60px 20px;
   text-align: center;
+  position: relative;
+  z-index: 5;   
 }
 
 .features-title {
@@ -149,6 +153,13 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes fadeVideo {
+  to {
+    opacity: 1;
+  }
+}
+
 
 @keyframes fade {
   from { opacity: 0; }
