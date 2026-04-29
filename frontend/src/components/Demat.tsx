@@ -1,7 +1,7 @@
 import React from "react";
 import "./Demat.css";
-import dhanLogo from "../assets/dhan.png";
-import kotakLogo from "../assets/kotak.png";
+import dhanLogo from "../assets/shark.jpg";
+import sharkLogo from "../assets/kotak.png";
 
 const Demat: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const Demat: React.FC = () => {
               <li>Zero brokerage on equity delivery</li>
               <li>Fast, reliable order execution</li>
               <li>Clean UI with powerful charts</li>
-e           </ul>
+            </ul>
             <a
               className="broker-cta"
               href="https://join.dhan.co/?invite=AEQAF94174"
@@ -31,19 +31,19 @@ e           </ul>
           </article>
 
           <article className="broker-card">
-            <img src={kotakLogo} alt="Kotak Neo" className="broker-logo" />
+            <img src={sharkLogo} alt="Kotak Neo" className="broker-logo" />
             <ul className="broker-points">
-              <li>Flat brokerage, transparent pricing</li>
-              <li>Backed by Kotak ecosystem</li>
-              <li>Advanced tools & insights</li>
+              <li>Crypto Perpetual Futures: Trade popular assets like Bitcoin (BTC), Ethereum (ETH), and Solana (SOL) without expiry dates</li>
+              <li>High Leverage: Offers leverage up to 150x, allowing traders to gain significant market exposure with a small amount of capital</li>
+              <li>No Crypto Ownership Required: Users profit from price movements using USDT-margined contracts, meaning you don't need to hold the underlying volatile assets</li>
             </ul>
             <a
               className="broker-cta"
-              href="https://kotaksecurities.ref-r.com/c/i/32531/86664963"
+              href="https://sharkexchange.in/referral?code=RZU990"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Open Kotak Neo Account
+              Open Shark Exchange Account
             </a>
           </article>
         </div>
