@@ -34,7 +34,7 @@ const Demat: React.FC = () => {
             <img src={sharkLogo} alt="Kotak Neo" className="broker-logo" />
             <ul className="broker-points">
               <li>Trade popular assets like Bitcoin (BTC), Ethereum (ETH), and Solana (SOL) without expiry dates</li>
-              <li>HOffers leverage up to 150x</li>
+              <li>Offers leverage up to 150x</li>
               <li>No Crypto Ownership Required</li>
             </ul>
             <a
