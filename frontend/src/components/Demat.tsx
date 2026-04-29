@@ -1,6 +1,6 @@
 import React from "react";
 import "./Demat.css";
-import dhanLogo from "../assets/sdhan.png";
+import dhanLogo from "../assets/dhan.png";
 import sharkLogo from "../assets/shark.jpg";
 
 const Demat: React.FC = () => {
