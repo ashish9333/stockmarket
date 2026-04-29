@@ -33,9 +33,9 @@ const Demat: React.FC = () => {
           <article className="broker-card">
             <img src={sharkLogo} alt="Kotak Neo" className="broker-logo" />
             <ul className="broker-points">
-              <li>Crypto Perpetual Futures: Trade popular assets like Bitcoin (BTC), Ethereum (ETH), and Solana (SOL) without expiry dates</li>
-              <li>High Leverage: Offers leverage up to 150x, allowing traders to gain significant market exposure with a small amount of capital</li>
-              <li>No Crypto Ownership Required: Users profit from price movements using USDT-margined contracts, meaning you don't need to hold the underlying volatile assets</li>
+              <li>Trade popular assets like Bitcoin (BTC), Ethereum (ETH), and Solana (SOL) without expiry dates</li>
+              <li>HOffers leverage up to 150x</li>
+              <li>No Crypto Ownership Required</li>
             </ul>
             <a
               className="broker-cta"
