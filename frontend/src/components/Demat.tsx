@@ -1,7 +1,7 @@
 import React from "react";
 import "./Demat.css";
-import dhanLogo from "../assets/shark.jpg";
-import sharkLogo from "../assets/kotak.png";
+import dhanLogo from "../assets/sdhan.png";
+import sharkLogo from "../assets/shark.jpg";
 
 const Demat: React.FC = () => {
   return (
